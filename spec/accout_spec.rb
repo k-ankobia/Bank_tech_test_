@@ -15,7 +15,7 @@ describe Account do
     it 'can print a transaction after a deposit' do 
       allow(account).to receive(:date).and_return(day)
       account.deposit(amount)
-      expect(account.transaction).to eq([[day, amount, ' ', account.balance]])
+      expect(account.transaction).to eq([[day, ' ', amount, account.balance]])
     end
   end
 

@@ -1,4 +1,5 @@
 require_relative 'helper'
+
 class Account
   include Helper
   attr_reader :balance, :transaction
@@ -12,7 +13,7 @@ class Account
 
   def deposit(amount)
     @balance += amount
-    @transaction << [date, amount, ' ', @balance]
+    @transaction << [date, ' ', amount, @balance]
   end
   
   def withdraw(amount)
