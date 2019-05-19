@@ -1,10 +1,12 @@
 require 'statement'
 
 describe Statement do
-subject(:statement) { described_class.new}
-  describe '#print_title' do 
+  let(:account_Double) { instance_double('Account', transaction: [['19/05/2019', 1000, '', 1000]]) }
+  subject(:statement) { described_class.new(account_Double.transaction) }
+
+  describe '#print_title' do
     it 'Can print bank statement title' do
-      expect { statement.print_title }.to output('date || credit || debit || balance').to_stdout
+      expect { statement.print_title }.to output("date || credit || debit || balance\n").to_stdout
     end
   end
 
@@ -15,4 +17,14 @@ subject(:statement) { described_class.new}
       expect { statement.date }.to output(@date.strftime('%Y-%m-%d')).to_stdout
     end
   end
+
+  describe '#format_statement' do
+    it 'can print the bank statement ' do
+      expect { statement.format_statement(account_Double.transaction) }.to output("date || credit || debit || balance
+19/05/2019 || 1000 ||  || 1000\n").to_stdout
+    end
+  end
 end
+
+# -19/05/2019 || 1000 ||  || 1000
+# +19/05/2019 || 1000 ||   || 1000
