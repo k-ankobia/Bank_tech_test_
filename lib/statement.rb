@@ -4,7 +4,6 @@ class Statement
   include Helper
   attr_reader :account_details
 
-  # TODO:
   def initialize(account_details)
     @account_details = account_details
   end
@@ -17,7 +16,7 @@ class Statement
     print Time.now.strftime('%Y-%m-%d')
   end
 
-  def format_statement(account_details)
+  def print_statement(account_details)
     print_title
     formatter(account_details)
   end

@@ -18,9 +18,9 @@ describe Statement do
     end
   end
 
-  describe '#format_statement' do
+  describe '#print_statement' do
     it 'can print the bank statement ' do
-      expect { statement.format_statement(account_Double.transaction) }.to output("date || credit || debit || balance
+      expect { statement.print_statement(account_Double.transaction) }.to output("date || credit || debit || balance
 19/05/2019 || 1000 ||  || 1000\n").to_stdout
     end
   end

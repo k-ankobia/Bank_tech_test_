@@ -11,7 +11,7 @@ describe 'User interaction' do
     my_account.deposit(2000)
     my_account.withdraw(500)
     my_statement = Statement.new(my_account.transaction)
-    my_statement.format_statement(my_account.transaction)
+    my_statement.print_statement(my_account.transaction)
 
     expect output("date || credit || debit || balance
   19/05/2019 ||   || 500.00 || 5000.00
