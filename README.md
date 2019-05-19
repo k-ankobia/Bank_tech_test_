@@ -96,4 +96,3 @@ date || credit || debit || balance
 
 **Diagram of interaction:**
 
-
