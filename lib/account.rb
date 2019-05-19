@@ -13,9 +13,9 @@ class Account
 
   def deposit(amount)
     @balance += amount
-    @transaction << [date, ' ', amount, @balance]
+    @transaction << [date, ' ', format('%.2f', amount), format('%.2f', @balance)]
   end
-  
+
   def withdraw(amount)
     @balance -= amount
     @transaction << [date, amount, ' ', @balance]
