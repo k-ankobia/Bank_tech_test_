@@ -1,4 +1,5 @@
 require_relative 'helper'
+require_relative 'statement'
 
 class Account
   include Helper
@@ -15,9 +16,9 @@ class Account
     @balance += amount
     @transaction << [date, format('%.2f', amount), ' ', format('%.2f', @balance)]
     end
-    
-    def withdraw(amount)
-      @balance -= amount
-      @transaction << [date, ' ', format('%.2f', amount), format('%.2f', @balance)]
+
+  def withdraw(amount)
+    @balance -= amount
+    @transaction << [date, ' ', format('%.2f', amount), format('%.2f', @balance)]
   end
 end
