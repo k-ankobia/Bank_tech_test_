@@ -1,7 +1,6 @@
 # Bank-Tech-Test
 
-It's week 10 at Makers Academy and hight time to start tech tests preparation.
-First test given to me is a Bank tech test.
+An application that prints a users account statement after making deposits and withdrawls. This ruby project focusing OOP, ecapsulation and cohesion for a tech test	
 
 **Requirements**
 ```
@@ -94,5 +93,4 @@ date || credit || debit || balance
 * Open bash terminal, go to the file location
 * type 'rspec' and press enter
 
-**Diagram of interaction:**
 
